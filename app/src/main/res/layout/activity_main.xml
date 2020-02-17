@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimaryDark"
+        tools:context=".MainActivity">
+
+    <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/seek_minute"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            app:wheel_max_process="59"
+            app:wheel_unreached_color="@color/unreached"
+            app:wheel_pointer_color="@color/reached"
+            app:wheel_unreached_width="32dp" />
+
+
+    <!--     300-32-32 = 236   -->
+
+    <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/seek_hour"
+            android:layout_width="236dp"
+            android:layout_height="236dp"
+            android:layout_alignStart="@+id/seek_minute"
+            android:layout_alignTop="@+id/seek_minute"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            app:wheel_max_process="11"
+            app:wheel_pointer_color="@color/button_colour"
+            app:wheel_pointer_radius="8dp"
+            app:wheel_reached_color="@color/colorAccent"
+            app:wheel_reached_width="32dp"
+            app:wheel_unreached_color="@color/full_colour" />
+
+    <TextView
+            android:id="@+id/textview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignEnd="@+id/seek_hour"
+            android:layout_alignBottom="@+id/seek_hour"
+            android:layout_marginEnd="68dp"
+            android:layout_marginBottom="68dp"
+            android:gravity="center"
+            android:textColor="#ffff"
+            android:textSize="35sp" />
+
+    <Button
+            android:id="@+id/Enable"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/my_button"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:text="@string/enable" />
+
+    <Button
+            android:id="@+id/Disable"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Enable"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/my_button"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/disable" />
+
+    <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Enable"
+            android:textSize="15sp"
+            app:buttonTint="@color/unreached"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/unreached"
+            android:layout_marginBottom="13dp"
+            android:text="@string/lockscreen" />
+
+    <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/checkBox"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/unreached"
+            android:textSize="15sp"
+            app:buttonTint="@color/unreached"
+            android:layout_marginBottom="13dp"
+            android:text="@string/wifi" />
+
+    <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Disable"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="13dp"
+            app:buttonTint="@color/unreached"
+            android:hapticFeedbackEnabled="true"
+            android:text="@string/music"
+            android:textColor="@color/unreached"
+            android:textSize="15sp" />
+
+    <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/checkBox2"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="13dp"
+            app:buttonTint="@color/unreached"
+            android:text="@string/bluetooth"
+            android:textColor="@color/unreached"
+            android:textSize="15sp" />
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="100"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimaryDark"
+                tools:context=".MainActivity">
+
+
+    <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/seek_minute"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerInParent="true"
+            app:wheel_max_process="59"
+            app:wheel_unreached_color="@color/unreached"
+            app:wheel_pointer_color="@color/reached"
+            app:wheel_unreached_width="32dp" />
+
+    <!--     300-32-32 = 236   -->
+    <io.feeeei.circleseekbar.CircleSeekBar
+            android:id="@+id/seek_hour"
+            android:layout_width="236dp"
+            android:layout_height="236dp"
+            android:layout_centerInParent="true"
+            app:wheel_max_process="11"
+            app:wheel_pointer_color="@color/button_colour"
+            app:wheel_reached_color="@color/colorAccent"
+            app:wheel_unreached_color="@color/full_colour"
+            app:wheel_pointer_radius="8dp"
+            app:wheel_reached_width="32dp"/>
+
+    <TextView
+            android:id="@+id/textview"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:textSize="25sp" />
+
+    <Button
+            android:id="@+id/Enable"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="18dp"
+            android:background="@drawable/my_button"
+            android:layout_marginBottom="40dp"
+            android:text="@string/enable" />
+
+    <Button
+            android:id="@+id/Disable"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/Enable"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="40dp"
+            android:layout_toEndOf="@+id/seek_minute"
+            android:background="@drawable/my_button"
+            android:text="@string/disable" />
+    <CheckBox
+            android:id="@+id/lockscreen"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Enable"
+            android:textSize="15sp"
+            android:buttonTint="@color/unreached"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/unreached"
+            android:onClick="onCheckboxClicked"
+            android:layout_marginBottom="13dp"
+            android:text="@string/lockscreen" />
+
+    <CheckBox
+            android:id="@+id/wifi"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/lockscreen"
+            android:layout_marginStart="30dp"
+            android:textColor="@color/unreached"
+            android:textSize="15sp"
+            android:onClick="onCheckboxClicked"
+            android:buttonTint="@color/unreached"
+            android:layout_marginBottom="13dp"
+            android:text="@string/wifi" />
+
+    <CheckBox
+            android:id="@+id/Music"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Disable"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="13dp"
+            android:buttonTint="@color/unreached"
+            android:hapticFeedbackEnabled="true"
+            android:text="@string/music"
+            android:onClick="onCheckboxClicked"
+            android:textColor="@color/unreached"
+            android:textSize="15sp" />
+
+    <CheckBox
+            android:id="@+id/bluetooth"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/Music"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="13dp"
+            android:buttonTint="@color/unreached"
+            android:onClick="onCheckboxClicked"
+            android:text="@string/bluetooth"
+            android:textColor="@color/unreached"
+            android:textSize="15sp" />
+
+</RelativeLayout>
