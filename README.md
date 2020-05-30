@@ -1,9 +1,11 @@
 # Taskter
 A simple Scheduler App which can turn off wifi bluetooth music and lock the screen according to timer
+<h5>Screenshots</h5>
 
-Screenshots
-
-
-![](2.png) ![](3.png) ![](1.png)
+<div align="center">
+    <img src="/2.png" width="200px" height="400px"</img> 
+     <img src="/3.png"width="200px" height="400px"</img>
+     <img src="/1.png" width="200px" height="400px"</img>
+</div>
 
 
